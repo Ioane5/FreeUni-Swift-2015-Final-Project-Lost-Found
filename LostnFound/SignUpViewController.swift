@@ -17,6 +17,18 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var PasswordField: UITextField!
     @IBOutlet weak var PasswordReField: UITextField!
     
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
+    
+    var isLoading = false {
+        didSet {
+            if isLoading {
+                spinner?.startAnimating()
+            } else {
+                spinner?.stopAnimating()
+            }
+        }
+    }
+    
     lazy var alert : UIAlertController = {
         var alert = UIAlertController(
             title: "Alert",
@@ -29,10 +41,14 @@ class SignUpViewController: UIViewController {
     
     func checkFields() ->Bool {
         return !(UsernameField.text?.isEmpty ?? true
-            && EmailField.text?.isEmpty ?? true
-            && PhoneFieled.text?.isEmpty ?? true
-            && PasswordField.text?.isEmpty ?? true
-            && PasswordReField.text?.isEmpty ?? true)
+            || EmailField.text?.isEmpty ?? true
+            || PhoneFieled.text?.isEmpty ?? true
+            || PasswordField.text?.isEmpty ?? true
+            || PasswordReField.text?.isEmpty ?? true)
+    }
+    
+    func passwordsMatch() -> Bool {
+        return PasswordField.text == PasswordReField.text
     }
     
     override func viewDidLoad() {
@@ -46,29 +62,41 @@ class SignUpViewController: UIViewController {
     
     @IBAction func SignUp() {
         if checkFields() {
-            let user = PFUser()
-            user.username = UsernameField.text
-            user.password = PasswordReField.text
-            user.email = EmailField.text
-            user["phone"] = PhoneFieled.text
-            
-            user.signUpInBackgroundWithBlock {
-                (succeeded: Bool, error: NSError?) -> Void in
-                if let error = error {
-                    let errorString = error.userInfo["error"] as? String
-                    // Show the errorString somewhere and let the user try again.
-                    self.alert.message = errorString
-                    self.presentViewController(self.alert, animated: true, completion: nil)
-                } else {
-                    // Hooray! Let them use the app now.
+            if passwordsMatch() {
+                let user = PFUser()
+                user.username = UsernameField.text
+                user.password = PasswordReField.text
+                user.email = EmailField.text
+                user["phone"] = PhoneFieled.text
+                isLoading = true
+                user.signUpInBackgroundWithBlock {
+                    (succeeded: Bool, error: NSError?) -> Void in
+                    self.isLoading = false
+                    if let error = error {
+                        let errorString = error.userInfo["error"] as? String
+                        // Show the errorString somewhere and let the user try again.
+                        self.alert.message = errorString
+                        self.presentViewController(self.alert, animated: true, completion: nil)
+                    } else {
+                        // Hooray! Let them use the app now.
+                        self.showMainScreen()
+                    }
                 }
+            } else {
+                alert.title = "Try Again"
+                alert.message = "Passwords don't match."
+                presentViewController(alert, animated: true, completion: nil)
             }
         } else {
             // show dialog
-            alert.title = "empty_fields_title".localized
-            alert.message = "empty_fields_message".localized
+            alert.title = "Try Again"
+            alert.message = "Please fill all fields."
             presentViewController(alert, animated: true, completion: nil)
         }
     }
     
+    func showMainScreen() {
+        let mainScreen = self.storyboard?.instantiateViewControllerWithIdentifier("MainScreen") as? MainScreenViewController
+        self.presentViewController(mainScreen!, animated: true, completion: nil)
+    }
 }

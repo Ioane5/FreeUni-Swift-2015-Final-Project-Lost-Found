@@ -23,12 +23,12 @@
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="WaN-mV-Yji">
                                         <rect key="frame" x="0.0" y="0.0" width="220" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="mMA-vi-lwv">
                                         <rect key="frame" x="0.0" y="38" width="220" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -39,7 +39,7 @@
                                     <accessibilityTraits key="traits" button="YES" playsSound="YES"/>
                                 </accessibility>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="220" id="Xw4-dv-u69"/>
+                                    <constraint firstAttribute="width" constant="220" id="j34-uK-jdR"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="Sign In">
@@ -62,28 +62,70 @@
                                     <segue destination="IhY-Md-i4Z" kind="show" id="TIn-9v-wRa"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="moR-jd-Sh4">
+                                <rect key="frame" x="290" y="290" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="Z6H-YI-TTP" firstAttribute="leading" secondItem="03c-Mx-GMt" secondAttribute="leading" id="93W-rA-mw5"/>
-                            <constraint firstItem="Z6H-YI-TTP" firstAttribute="leading" secondItem="EiL-8R-sKv" secondAttribute="leading" id="Cvw-tm-XIh"/>
-                            <constraint firstItem="Z6H-YI-TTP" firstAttribute="top" secondItem="EiL-8R-sKv" secondAttribute="bottom" constant="32" id="PhJ-JV-z3K"/>
-                            <constraint firstItem="Z6H-YI-TTP" firstAttribute="trailing" secondItem="EiL-8R-sKv" secondAttribute="trailing" id="RL1-bs-vi6"/>
-                            <constraint firstItem="03c-Mx-GMt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SQH-Vc-SVJ"/>
-                            <constraint firstItem="03c-Mx-GMt" firstAttribute="trailing" secondItem="Z6H-YI-TTP" secondAttribute="trailing" id="gHT-wr-dA6"/>
-                            <constraint firstItem="03c-Mx-GMt" firstAttribute="top" secondItem="Z6H-YI-TTP" secondAttribute="bottom" constant="8" symbolic="YES" id="guc-Kr-Cj8"/>
-                            <constraint firstItem="EiL-8R-sKv" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="lxO-Bh-1Fd"/>
+                            <constraint firstItem="03c-Mx-GMt" firstAttribute="top" secondItem="Z6H-YI-TTP" secondAttribute="bottom" constant="8" symbolic="YES" id="Ibk-lU-4uH"/>
+                            <constraint firstItem="Z6H-YI-TTP" firstAttribute="trailing" secondItem="03c-Mx-GMt" secondAttribute="trailing" id="IsB-UX-IFG"/>
+                            <constraint firstItem="moR-jd-Sh4" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="JEj-3t-2EP"/>
+                            <constraint firstItem="03c-Mx-GMt" firstAttribute="leading" secondItem="Z6H-YI-TTP" secondAttribute="leading" id="PQT-tj-acu"/>
+                            <constraint firstItem="EiL-8R-sKv" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="VN0-UN-a2E"/>
+                            <constraint firstItem="Z6H-YI-TTP" firstAttribute="top" secondItem="EiL-8R-sKv" secondAttribute="bottom" constant="32" id="Vao-CI-KQG"/>
+                            <constraint firstItem="Z6H-YI-TTP" firstAttribute="trailing" secondItem="EiL-8R-sKv" secondAttribute="trailing" id="mQh-3z-PZB"/>
+                            <constraint firstItem="EiL-8R-sKv" firstAttribute="top" secondItem="moR-jd-Sh4" secondAttribute="bottom" constant="97" id="pkA-AV-UHG"/>
+                            <constraint firstItem="EiL-8R-sKv" firstAttribute="centerX" secondItem="moR-jd-Sh4" secondAttribute="centerX" id="vCi-6D-3KP"/>
+                            <constraint firstItem="moR-jd-Sh4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yI0-2t-elc"/>
+                            <constraint firstItem="Z6H-YI-TTP" firstAttribute="leading" secondItem="EiL-8R-sKv" secondAttribute="leading" id="ybx-6v-gIM"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="pkA-AV-UHG"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="WLq-XQ-9Tu"/>
                     <connections>
                         <outlet property="PasswordField" destination="mMA-vi-lwv" id="H9U-8h-sdS"/>
                         <outlet property="UsernameField" destination="WaN-mV-Yji" id="pV4-Hx-0ov"/>
+                        <outlet property="spinner" destination="moR-jd-Sh4" id="dOy-ms-oNl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2570" y="278"/>
+        </scene>
+        <!--Main Screen View Controller-->
+        <scene sceneID="eme-QB-spv">
+            <objects>
+                <viewController storyboardIdentifier="MainScreen" id="hai-Ub-VGf" customClass="MainScreenViewController" customModule="LostnFound" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Gwl-Rf-ANc"/>
+                        <viewControllerLayoutGuide type="bottom" id="EIC-Zl-gAt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BgV-IZ-JoD">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hooray! Logged In" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="puU-b6-Pls">
+                                <rect key="frame" x="230" y="289" width="141" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="puU-b6-Pls" firstAttribute="centerY" secondItem="BgV-IZ-JoD" secondAttribute="centerY" id="DbI-Xf-ajG"/>
+                            <constraint firstItem="puU-b6-Pls" firstAttribute="centerX" secondItem="BgV-IZ-JoD" secondAttribute="centerX" id="Oie-jE-SV1"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OuY-5B-8xp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2564" y="1051"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="oCd-dV-hBW">
@@ -103,7 +145,7 @@
                                     <constraint firstAttribute="width" constant="97" id="wkp-mL-WkH"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="phonePad" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="phonePad"/>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="wkp-mL-WkH"/>
@@ -116,7 +158,7 @@
                                     <constraint firstAttribute="width" constant="97" id="TlW-zS-nxc"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress"/>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="TlW-zS-nxc"/>
@@ -126,12 +168,12 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VtT-pt-gLG">
                                 <rect key="frame" x="170" y="285" width="260" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet" keyboardAppearance="alert" returnKeyType="next" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="erb-nC-k3W">
                                 <rect key="frame" x="170" y="323" width="260" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet" keyboardAppearance="alert" returnKeyType="go" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zkh-qW-tzY">
                                 <rect key="frame" x="170" y="361" width="260" height="30"/>
@@ -168,19 +210,24 @@
                                     <constraint firstAttribute="width" constant="97" id="wT5-Fz-7qK"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" enablesReturnKeyAutomatically="YES"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="wT5-Fz-7qK"/>
                                     </mask>
                                 </variation>
                             </textField>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="QHe-Ta-7tA">
+                                <rect key="frame" x="290" y="290" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="QHe-Ta-7tA" firstAttribute="centerX" secondItem="aOf-uT-Hs6" secondAttribute="centerX" id="2dz-Ep-Oh2"/>
                             <constraint firstItem="erb-nC-k3W" firstAttribute="leading" secondItem="VtT-pt-gLG" secondAttribute="leading" id="31g-vP-oX4"/>
                             <constraint firstItem="jMA-Qa-tj4" firstAttribute="leading" secondItem="hfA-qa-hdb" secondAttribute="leading" id="5wy-b6-oDM"/>
                             <constraint firstItem="erb-nC-k3W" firstAttribute="top" secondItem="VtT-pt-gLG" secondAttribute="bottom" constant="8" symbolic="YES" id="9kc-ej-BZH"/>
+                            <constraint firstItem="QHe-Ta-7tA" firstAttribute="centerY" secondItem="aOf-uT-Hs6" secondAttribute="centerY" id="9zS-Hi-e5j"/>
                             <constraint firstItem="Vzc-1y-c42" firstAttribute="top" secondItem="wzI-xa-NcC" secondAttribute="bottom" constant="208" id="ASz-g2-X2W"/>
                             <constraint firstItem="l8E-2A-HN6" firstAttribute="leading" secondItem="zkh-qW-tzY" secondAttribute="leading" id="Czo-ZD-DAq"/>
                             <constraint firstItem="erb-nC-k3W" firstAttribute="leading" secondItem="zkh-qW-tzY" secondAttribute="leading" id="Iog-gH-AYs"/>
@@ -218,6 +265,7 @@
                         <outlet property="PasswordReField" destination="erb-nC-k3W" id="cmZ-XW-T6h"/>
                         <outlet property="PhoneFieled" destination="Vzc-1y-c42" id="icg-kv-YNE"/>
                         <outlet property="UsernameField" destination="jMA-Qa-tj4" id="RTD-IS-wzS"/>
+                        <outlet property="spinner" destination="QHe-Ta-7tA" id="vca-eW-y10"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CYR-6l-rSy" userLabel="First Responder" sceneMemberID="firstResponder"/>

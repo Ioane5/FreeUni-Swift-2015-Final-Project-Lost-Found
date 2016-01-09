@@ -19,7 +19,7 @@
 		3B359F0A1C405042008CF2EC /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B359F091C405042008CF2EC /* libz.tbd */; };
 		3B359F0C1C405049008CF2EC /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B359F0B1C405049008CF2EC /* libsqlite3.tbd */; };
 		3B359F101C406EE7008CF2EC /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B359F0F1C406EE7008CF2EC /* SignUpViewController.swift */; };
-		3B359F141C408DB1008CF2EC /* Strings.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B359F131C408DB1008CF2EC /* Strings.strings */; };
+		3B359F161C4125EE008CF2EC /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B359F151C4125EE008CF2EC /* MainScreenViewController.swift */; };
 		3B5DAEAD1C18D85500094B6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5DAEAC1C18D85500094B6C /* AppDelegate.swift */; };
 		3B5DAEAF1C18D85500094B6C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5DAEAE1C18D85500094B6C /* LoginViewController.swift */; };
 		3B5DAEB21C18D85500094B6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B5DAEB01C18D85500094B6C /* Main.storyboard */; };
@@ -40,7 +40,7 @@
 		3B359F091C405042008CF2EC /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		3B359F0B1C405049008CF2EC /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		3B359F0F1C406EE7008CF2EC /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		3B359F131C408DB1008CF2EC /* Strings.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Strings.strings; sourceTree = "<group>"; };
+		3B359F151C4125EE008CF2EC /* MainScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
 		3B5DAEA91C18D85500094B6C /* LostnFound.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LostnFound.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B5DAEAC1C18D85500094B6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B5DAEAE1C18D85500094B6C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -112,12 +112,12 @@
 				3B5DAEAC1C18D85500094B6C /* AppDelegate.swift */,
 				3B5DAEAE1C18D85500094B6C /* LoginViewController.swift */,
 				3B359F0F1C406EE7008CF2EC /* SignUpViewController.swift */,
+				3B359F151C4125EE008CF2EC /* MainScreenViewController.swift */,
 				3B5DAEB01C18D85500094B6C /* Main.storyboard */,
 				3B5DAEB31C18D85500094B6C /* Assets.xcassets */,
 				3B5DAEB51C18D85500094B6C /* LaunchScreen.storyboard */,
 				3B5DAEB81C18D85500094B6C /* Info.plist */,
 				3B359EFA1C404EBA008CF2EC /* Frameworks */,
-				3B359F131C408DB1008CF2EC /* Strings.strings */,
 			);
 			path = LostnFound;
 			sourceTree = "<group>";
@@ -181,7 +181,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B5DAEB71C18D85500094B6C /* LaunchScreen.storyboard in Resources */,
-				3B359F141C408DB1008CF2EC /* Strings.strings in Resources */,
 				3B5DAEB41C18D85500094B6C /* Assets.xcassets in Resources */,
 				3B5DAEB21C18D85500094B6C /* Main.storyboard in Resources */,
 			);
@@ -195,6 +194,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B359F101C406EE7008CF2EC /* SignUpViewController.swift in Sources */,
+				3B359F161C4125EE008CF2EC /* MainScreenViewController.swift in Sources */,
 				3B5DAEAF1C18D85500094B6C /* LoginViewController.swift in Sources */,
 				3B5DAEAD1C18D85500094B6C /* AppDelegate.swift in Sources */,
 			);

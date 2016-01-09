@@ -13,6 +13,17 @@ class LoginController: UIViewController {
     
     @IBOutlet weak var UsernameField: UITextField!
     @IBOutlet weak var PasswordField: UITextField!
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
+    
+    var isLoading = false {
+        didSet {
+            if isLoading {
+                spinner?.startAnimating()
+            } else {
+                spinner?.stopAnimating()
+            }
+        }
+    }
     
     lazy var alert : UIAlertController = {
         var alert = UIAlertController(
@@ -27,7 +38,7 @@ class LoginController: UIViewController {
     
     func checkFields() ->Bool {
         return !(UsernameField.text?.isEmpty ?? true
-            && PasswordField.text?.isEmpty ?? true)
+            || PasswordField.text?.isEmpty ?? true)
     }
     
     override func viewDidLoad() {
@@ -41,15 +52,34 @@ class LoginController: UIViewController {
     
     @IBAction func SignIn() {
         if checkFields() {
-            
+            isLoading = true
+            PFUser.logInWithUsernameInBackground(UsernameField.text!, password: PasswordField.text!) {
+                (user: PFUser?, error: NSError?) -> Void in
+                self.isLoading = false
+                if user != nil {
+                    // Do stuff after successful login.
+                    self.showMainScreen()
+                } else {
+                    // The login failed. Check error to see why.
+                    let errorString = error!.userInfo["error"] as? String
+                    self.alert.message = errorString
+                    self.presentViewController(self.alert, animated: true, completion: nil)
+                    
+                    
+                }
+            }
         } else {
             // show dialog
-            alert.title = "empty_fields_title".localized
-            alert.message = "empty_fields_message".localized
+            alert.title = "Try Again"
+            alert.message = "Please fill all fields."
             presentViewController(alert, animated: true, completion: nil)
         }
     }
     
+    func showMainScreen() {
+        let mainScreen = self.storyboard?.instantiateViewControllerWithIdentifier("MainScreen") as? MainScreenViewController
+        self.presentViewController(mainScreen!, animated: true, completion: nil)
+    }
     
 }
 
