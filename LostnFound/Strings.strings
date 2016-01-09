@@ -1,0 +1,11 @@
+/* 
+  Strings.strings
+  LostnFound
+
+  Created by Ioane Sharvadze on 1/9/16.
+  Copyright © 2016 Ioane Sharvadze. All rights reserved.
+*/
+
+
+"empty_fields_message" = "Try Again";
+"empty_fields_message" = "Please fill all fields.";
