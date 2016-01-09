@@ -25,6 +25,9 @@
 		3B5DAEB21C18D85500094B6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B5DAEB01C18D85500094B6C /* Main.storyboard */; };
 		3B5DAEB41C18D85500094B6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B5DAEB31C18D85500094B6C /* Assets.xcassets */; };
 		3B5DAEB71C18D85500094B6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B5DAEB51C18D85500094B6C /* LaunchScreen.storyboard */; };
+		74E11A121C41991700F5B5F7 /* Models in Resources */ = {isa = PBXBuildFile; fileRef = 74E11A0F1C41991700F5B5F7 /* Models */; };
+		74E11A131C41991700F5B5F7 /* ViewControllers in Resources */ = {isa = PBXBuildFile; fileRef = 74E11A101C41991700F5B5F7 /* ViewControllers */; };
+		74E11A141C41991700F5B5F7 /* Views in Resources */ = {isa = PBXBuildFile; fileRef = 74E11A111C41991700F5B5F7 /* Views */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +51,9 @@
 		3B5DAEB31C18D85500094B6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3B5DAEB61C18D85500094B6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3B5DAEB81C18D85500094B6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		74E11A0F1C41991700F5B5F7 /* Models */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Models; sourceTree = "<group>"; };
+		74E11A101C41991700F5B5F7 /* ViewControllers */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ViewControllers; sourceTree = "<group>"; };
+		74E11A111C41991700F5B5F7 /* Views */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Views; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +115,9 @@
 		3B5DAEAB1C18D85500094B6C /* LostnFound */ = {
 			isa = PBXGroup;
 			children = (
+				74E11A0F1C41991700F5B5F7 /* Models */,
+				74E11A111C41991700F5B5F7 /* Views */,
+				74E11A101C41991700F5B5F7 /* ViewControllers */,
 				3B5DAEAE1C18D85500094B6C /* LoginViewController.swift */,
 				3B359F0F1C406EE7008CF2EC /* SignUpViewController.swift */,
 				3B359F151C4125EE008CF2EC /* MainScreenViewController.swift */,
@@ -191,6 +200,9 @@
 			files = (
 				3B5DAEB71C18D85500094B6C /* LaunchScreen.storyboard in Resources */,
 				3B5DAEB41C18D85500094B6C /* Assets.xcassets in Resources */,
+				74E11A131C41991700F5B5F7 /* ViewControllers in Resources */,
+				74E11A141C41991700F5B5F7 /* Views in Resources */,
+				74E11A121C41991700F5B5F7 /* Models in Resources */,
 				3B5DAEB21C18D85500094B6C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
