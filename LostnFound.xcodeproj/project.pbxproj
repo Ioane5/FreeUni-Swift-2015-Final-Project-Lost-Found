@@ -25,7 +25,6 @@
 		749664271C425C8B005FBE26 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749664231C425C8B005FBE26 /* LoginViewController.swift */; };
 		749664281C425C8B005FBE26 /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749664241C425C8B005FBE26 /* MainScreenViewController.swift */; };
 		749664291C425C8B005FBE26 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749664251C425C8B005FBE26 /* SignUpViewController.swift */; };
-		749664301C426B6F005FBE26 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7496642F1C426B6F005FBE26 /* StringExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,7 +48,6 @@
 		749664231C425C8B005FBE26 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		749664241C425C8B005FBE26 /* MainScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
 		749664251C425C8B005FBE26 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		7496642F1C426B6F005FBE26 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringExtension.swift; path = Extensions/StringExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,7 +109,6 @@
 		3B5DAEAB1C18D85500094B6C /* LostnFound */ = {
 			isa = PBXGroup;
 			children = (
-				7496642C1C426B0D005FBE26 /* Extensions */,
 				749664211C425C8A005FBE26 /* Models */,
 				749664261C425C8B005FBE26 /* Views */,
 				749664221C425C8B005FBE26 /* ViewControllers */,
@@ -147,14 +144,6 @@
 			children = (
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		7496642C1C426B0D005FBE26 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				7496642F1C426B6F005FBE26 /* StringExtension.swift */,
-			);
-			name = Extensions;
 			sourceTree = "<group>";
 		};
 		74E11A0E1C4197AC00F5B5F7 /* Supporting Files */ = {
@@ -239,7 +228,6 @@
 			files = (
 				749664291C425C8B005FBE26 /* SignUpViewController.swift in Sources */,
 				749664271C425C8B005FBE26 /* LoginViewController.swift in Sources */,
-				749664301C426B6F005FBE26 /* StringExtension.swift in Sources */,
 				3B5DAEAD1C18D85500094B6C /* AppDelegate.swift in Sources */,
 				749664281C425C8B005FBE26 /* MainScreenViewController.swift in Sources */,
 			);
