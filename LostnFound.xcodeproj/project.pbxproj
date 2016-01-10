@@ -25,6 +25,7 @@
 		749664271C425C8B005FBE26 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749664231C425C8B005FBE26 /* LoginViewController.swift */; };
 		749664281C425C8B005FBE26 /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749664241C425C8B005FBE26 /* MainScreenViewController.swift */; };
 		749664291C425C8B005FBE26 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749664251C425C8B005FBE26 /* SignUpViewController.swift */; };
+		749664341C426C39005FBE26 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749664331C426C39005FBE26 /* StringExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		749664231C425C8B005FBE26 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		749664241C425C8B005FBE26 /* MainScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
 		749664251C425C8B005FBE26 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		749664331C426C39005FBE26 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 				3B5DAEB51C18D85500094B6C /* LaunchScreen.storyboard */,
 				3B5DAEB31C18D85500094B6C /* Assets.xcassets */,
 				3B5DAEB81C18D85500094B6C /* Info.plist */,
+				749664321C426C39005FBE26 /* Extensions */,
 				74E11A0E1C4197AC00F5B5F7 /* Supporting Files */,
 				3B359EFA1C404EBA008CF2EC /* Frameworks */,
 			);
@@ -144,6 +147,14 @@
 			children = (
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		749664321C426C39005FBE26 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				749664331C426C39005FBE26 /* StringExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		74E11A0E1C4197AC00F5B5F7 /* Supporting Files */ = {
@@ -228,6 +239,7 @@
 			files = (
 				749664291C425C8B005FBE26 /* SignUpViewController.swift in Sources */,
 				749664271C425C8B005FBE26 /* LoginViewController.swift in Sources */,
+				749664341C426C39005FBE26 /* StringExtension.swift in Sources */,
 				3B5DAEAD1C18D85500094B6C /* AppDelegate.swift in Sources */,
 				749664281C425C8B005FBE26 /* MainScreenViewController.swift in Sources */,
 			);
