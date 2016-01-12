@@ -22,6 +22,8 @@
 		3B5DAEB21C18D85500094B6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B5DAEB01C18D85500094B6C /* Main.storyboard */; };
 		3B5DAEB41C18D85500094B6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B5DAEB31C18D85500094B6C /* Assets.xcassets */; };
 		3B5DAEB71C18D85500094B6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B5DAEB51C18D85500094B6C /* LaunchScreen.storyboard */; };
+		74692E091C4584FA00696EFE /* FoundTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74692E081C4584FA00696EFE /* FoundTableViewController.swift */; };
+		74692E0B1C45851200696EFE /* LostTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74692E0A1C45851200696EFE /* LostTableViewController.swift */; };
 		749664271C425C8B005FBE26 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749664231C425C8B005FBE26 /* LoginViewController.swift */; };
 		749664281C425C8B005FBE26 /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749664241C425C8B005FBE26 /* MainScreenViewController.swift */; };
 		749664291C425C8B005FBE26 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749664251C425C8B005FBE26 /* SignUpViewController.swift */; };
@@ -46,6 +48,8 @@
 		3B5DAEB31C18D85500094B6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3B5DAEB61C18D85500094B6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3B5DAEB81C18D85500094B6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		74692E081C4584FA00696EFE /* FoundTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundTableViewController.swift; sourceTree = "<group>"; };
+		74692E0A1C45851200696EFE /* LostTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LostTableViewController.swift; sourceTree = "<group>"; };
 		749664231C425C8B005FBE26 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		749664241C425C8B005FBE26 /* MainScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
 		749664251C425C8B005FBE26 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -138,6 +142,8 @@
 				749664231C425C8B005FBE26 /* LoginViewController.swift */,
 				749664241C425C8B005FBE26 /* MainScreenViewController.swift */,
 				749664251C425C8B005FBE26 /* SignUpViewController.swift */,
+				74692E081C4584FA00696EFE /* FoundTableViewController.swift */,
+				74692E0A1C45851200696EFE /* LostTableViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -238,9 +244,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				749664291C425C8B005FBE26 /* SignUpViewController.swift in Sources */,
+				74692E0B1C45851200696EFE /* LostTableViewController.swift in Sources */,
 				749664271C425C8B005FBE26 /* LoginViewController.swift in Sources */,
 				749664341C426C39005FBE26 /* StringExtension.swift in Sources */,
 				3B5DAEAD1C18D85500094B6C /* AppDelegate.swift in Sources */,
+				74692E091C4584FA00696EFE /* FoundTableViewController.swift in Sources */,
 				749664281C425C8B005FBE26 /* MainScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
