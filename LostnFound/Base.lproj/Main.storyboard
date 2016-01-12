@@ -293,11 +293,11 @@
             </objects>
             <point key="canvasLocation" x="4297" y="1101"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Found-->
         <scene sceneID="DWN-yF-8XN">
             <objects>
                 <navigationController id="Msf-7n-vav" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="mostViewed" id="dgB-Fp-yUE"/>
+                    <tabBarItem key="tabBarItem" title="Found" image="FoundTabIcon" id="dgB-Fp-yUE"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="NNq-Ze-Vzg">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -339,11 +339,11 @@
             </objects>
             <point key="canvasLocation" x="4297" y="1965"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Lost-->
         <scene sceneID="TqT-bI-Qhm">
             <objects>
                 <navigationController id="y5A-y2-6sN" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="search" id="iwA-Ov-CI5"/>
+                    <tabBarItem key="tabBarItem" title="Lost" image="LostTabIcon" id="iwA-Ov-CI5"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Y3d-l7-xcA">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -376,6 +376,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="FoundTabIcon" width="30" height="30"/>
         <image name="InAppIcon" width="256" height="256"/>
+        <image name="LostTabIcon" width="30" height="30"/>
     </resources>
 </document>
