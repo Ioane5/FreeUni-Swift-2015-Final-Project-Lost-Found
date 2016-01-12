@@ -34,7 +34,7 @@
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z6H-YI-TTP">
                                 <rect key="frame" x="190" y="366" width="220" height="30"/>
-                                <color key="backgroundColor" red="1" green="0.6705882352941176" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.16078431369999999" green="0.71372549019999998" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration" label="Sign In">
                                     <accessibilityTraits key="traits" button="YES" playsSound="YES"/>
                                 </accessibility>
@@ -65,6 +65,12 @@
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="moR-jd-Sh4">
                                 <rect key="frame" x="290" y="290" width="20" height="20"/>
                             </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LostnFound" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b5X-Fw-MbT">
+                                <rect key="frame" x="240" y="229" width="121" height="29"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="24"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -74,6 +80,8 @@
                             <constraint firstItem="03c-Mx-GMt" firstAttribute="leading" secondItem="Z6H-YI-TTP" secondAttribute="leading" id="PQT-tj-acu"/>
                             <constraint firstItem="EiL-8R-sKv" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="VN0-UN-a2E"/>
                             <constraint firstItem="Z6H-YI-TTP" firstAttribute="top" secondItem="EiL-8R-sKv" secondAttribute="bottom" constant="32" id="Vao-CI-KQG"/>
+                            <constraint firstItem="b5X-Fw-MbT" firstAttribute="centerX" secondItem="WaN-mV-Yji" secondAttribute="centerX" id="fBl-cN-gDQ"/>
+                            <constraint firstItem="WaN-mV-Yji" firstAttribute="top" secondItem="b5X-Fw-MbT" secondAttribute="bottom" constant="8" id="jw7-8W-lR0"/>
                             <constraint firstItem="Z6H-YI-TTP" firstAttribute="trailing" secondItem="EiL-8R-sKv" secondAttribute="trailing" id="mQh-3z-PZB"/>
                             <constraint firstItem="EiL-8R-sKv" firstAttribute="top" secondItem="moR-jd-Sh4" secondAttribute="bottom" constant="97" id="pkA-AV-UHG"/>
                             <constraint firstItem="EiL-8R-sKv" firstAttribute="centerX" secondItem="moR-jd-Sh4" secondAttribute="centerX" id="vCi-6D-3KP"/>
@@ -177,7 +185,7 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zkh-qW-tzY">
                                 <rect key="frame" x="170" y="361" width="260" height="30"/>
-                                <color key="backgroundColor" red="1" green="0.6705882353" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.16078431369999999" green="0.71372549019999998" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration" label="Sign In">
                                     <accessibilityTraits key="traits" button="YES" playsSound="YES"/>
                                 </accessibility>
@@ -220,16 +228,24 @@
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="QHe-Ta-7tA">
                                 <rect key="frame" x="290" y="290" width="20" height="20"/>
                             </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LostnFound" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J0G-MM-cEf">
+                                <rect key="frame" x="218" y="82" width="165" height="40"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="33"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="QHe-Ta-7tA" firstAttribute="centerX" secondItem="aOf-uT-Hs6" secondAttribute="centerX" id="2dz-Ep-Oh2"/>
                             <constraint firstItem="erb-nC-k3W" firstAttribute="leading" secondItem="VtT-pt-gLG" secondAttribute="leading" id="31g-vP-oX4"/>
+                            <constraint firstItem="jMA-Qa-tj4" firstAttribute="top" secondItem="J0G-MM-cEf" secondAttribute="bottom" constant="49" id="5sy-dD-lDJ"/>
                             <constraint firstItem="jMA-Qa-tj4" firstAttribute="leading" secondItem="hfA-qa-hdb" secondAttribute="leading" id="5wy-b6-oDM"/>
                             <constraint firstItem="erb-nC-k3W" firstAttribute="top" secondItem="VtT-pt-gLG" secondAttribute="bottom" constant="8" symbolic="YES" id="9kc-ej-BZH"/>
                             <constraint firstItem="QHe-Ta-7tA" firstAttribute="centerY" secondItem="aOf-uT-Hs6" secondAttribute="centerY" id="9zS-Hi-e5j"/>
                             <constraint firstItem="Vzc-1y-c42" firstAttribute="top" secondItem="wzI-xa-NcC" secondAttribute="bottom" constant="208" id="ASz-g2-X2W"/>
                             <constraint firstItem="l8E-2A-HN6" firstAttribute="leading" secondItem="zkh-qW-tzY" secondAttribute="leading" id="Czo-ZD-DAq"/>
+                            <constraint firstItem="J0G-MM-cEf" firstAttribute="centerX" secondItem="jMA-Qa-tj4" secondAttribute="centerX" id="DEw-oz-Dy6"/>
                             <constraint firstItem="erb-nC-k3W" firstAttribute="leading" secondItem="zkh-qW-tzY" secondAttribute="leading" id="Iog-gH-AYs"/>
                             <constraint firstItem="hfA-qa-hdb" firstAttribute="leading" secondItem="Vzc-1y-c42" secondAttribute="leading" id="L5h-O8-kni"/>
                             <constraint firstItem="zkh-qW-tzY" firstAttribute="trailing" secondItem="erb-nC-k3W" secondAttribute="trailing" id="LsF-Ox-gIx"/>
