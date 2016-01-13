@@ -25,6 +25,13 @@ class LostTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        self.navigationItem.leftBarButtonItem = self.editButtonItem()
+        let addNew = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: Selector("btnAddNewLostItem"))
+        self.navigationItem.rightBarButtonItem = addNew
+    }
+    
+    func btnAddNewLostItem() {
+        print("Add Button: Clicked")
     }
 
     override func didReceiveMemoryWarning() {
