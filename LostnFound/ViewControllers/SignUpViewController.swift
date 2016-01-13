@@ -69,7 +69,7 @@ class SignUpViewController: UIViewController {
                 user.email = EmailField.text
                 user["phone"] = PhoneFieled.text
                 isLoading = true
-                user.signUpInBackgroundWithBlock {
+                user.signUpInBackgroundWithBlock { [unowned self]
                     (succeeded: Bool, error: NSError?) -> Void in
                     self.isLoading = false
                     if let error = error {

@@ -54,6 +54,7 @@ class LoginController: UIViewController {
         if checkFields() {
             isLoading = true
             PFUser.logInWithUsernameInBackground(UsernameField.text!, password: PasswordField.text!) {
+                [unowned self]
                 (user: PFUser?, error: NSError?) -> Void in
                 self.isLoading = false
                 if user != nil {
