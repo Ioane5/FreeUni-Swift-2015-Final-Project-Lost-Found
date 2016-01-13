@@ -9,6 +9,11 @@
 import UIKit
 
 class FoundTableViewController: UITableViewController {
+    
+    var foundItems = [
+        Item(name: "სავარცხელი", tags: ["რაღაცა", "რუღაცა"], location: "დიდუბე"),
+        Item(name: "ძაღლი", tags: ["რაღაცა", "რუღაცა"], location: "საბურთალო"),
+        Item(name: "ქოლგა", tags: ["რაღაცა", "რუღაცა"], location: "ვარკეთილი")]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,23 +34,24 @@ class FoundTableViewController: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1 // სატესტოდ
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return foundItems.count // სატესტოდ
     }
 
-    /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("foundItem", forIndexPath: indexPath)
 
         // Configure the cell...
+        let foundItem = foundItems[indexPath.row] as Item
+        cell.textLabel?.text = foundItem.name
+        cell.detailTextLabel?.text = foundItem.location
 
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
