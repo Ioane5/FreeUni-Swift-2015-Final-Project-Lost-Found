@@ -9,13 +9,13 @@
 import UIKit
 
 class LostTableViewController: UITableViewController {
-    
-    var lostItems = [
-        Item(name: "ბეჭედი", tags: ["რაღაცა", "რუღაცა"], location: "დიდუბე"),
-        Item(name: "მანქანა", tags: ["რაღაცა", "რუღაცა"], location: "საბურთალო"),
-        Item(name: "ტემპერატურა", tags: ["რაღაცა", "რუღაცა"], location: "ვარკეთილი"),
-        Item(name: "მოსწავლე", tags: ["რაღაცა", "რუღაცა"], location: "გორი"),
-        Item(name: "ოჯახი", tags: ["რაღაცა", "რუღაცა"], location: "სტეფანწმინდა")]
+  
+//    var lostItems = [
+//        Item(name: "ბეჭედი", tags: ["რაღაცა", "რუღაცა"], location: "დიდუბე"),
+//        Item(name: "მანქანა", tags: ["რაღაცა", "რუღაცა"], location: "საბურთალო"),
+//        Item(name: "ტემპერატურა", tags: ["რაღაცა", "რუღაცა"], location: "ვარკეთილი"),
+//        Item(name: "მოსწავლე", tags: ["რაღაცა", "რუღაცა"], location: "გორი"),
+//        Item(name: "ოჯახი", tags: ["რაღაცა", "რუღაცა"], location: "სტეფანწმინდა")]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,21 +47,21 @@ class LostTableViewController: UITableViewController {
         return 1 // სატესტოდ
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return lostItems.count // სატესტოდ
-    }
-
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("lostItem", forIndexPath: indexPath)
-        
-        // Configure the cell...
-        let lostItem = lostItems[indexPath.row] as Item
-        cell.textLabel?.text = lostItem.name
-        cell.detailTextLabel?.text = lostItem.location
-        
-        return cell
-    }
+//    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        // #warning Incomplete implementation, return the number of rows
+//        return lostItems.count // სატესტოდ
+//    }
+//
+//    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+//        let cell = tableView.dequeueReusableCellWithIdentifier("lostItem", forIndexPath: indexPath)
+//        
+//        // Configure the cell...
+//        let lostItem = lostItems[indexPath.row] as Item
+//        cell.textLabel?.text = lostItem.name
+//        cell.detailTextLabel?.text = lostItem.location
+//        
+//        return cell
+//    }
 
     /*
     // Override to support conditional editing of the table view.

@@ -7,18 +7,37 @@
 //
 
 import UIKit
+import MapKit
+import Parse
 
 class NewItemViewController : UITableViewController,UIPickerViewDataSource,UIPickerViewDelegate {
     
     @IBOutlet weak var LostOrFound: UISegmentedControl!
     @IBOutlet weak var DatePicker: UIDatePicker!
-    @IBOutlet weak var PlaceDescription: UILabel!
     @IBOutlet weak var Category: UIPickerView!
     @IBOutlet weak var Description: UITextView!
-    
+    @IBOutlet weak var PickedPlace: UILabel!
+    @IBOutlet weak var Radius: UITextField!
     
     let categories = ["Animals/Pets","Bags, Baggage, Luggage","Clothing/jewelery","Electronics","Jewelry","Other"]
     
+    lazy var alert : UIAlertController = {
+        var alert = UIAlertController(
+            title: nil,
+            message : nil,
+            preferredStyle: UIAlertControllerStyle.Alert
+        )
+        alert.addAction(UIAlertAction(title: "Got it", style: UIAlertActionStyle.Cancel, handler: nil))
+        return alert
+    }()
+    
+    var placeCoord : CLLocationCoordinate2D? {
+        didSet {
+            placeCoord?.getAddress() { (addr) -> Void in
+                self.PickedPlace.text = addr
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,12 +59,41 @@ class NewItemViewController : UITableViewController,UIPickerViewDataSource,UIPic
     
     
     @IBAction func Add() {
-        
+        var radius : Int?
+        if let input = Radius.text {
+            radius = Int(input)
+        }
+        if placeCoord != nil && radius != nil {
+            // send data.
+            let newItem = Item()
+            newItem.isLost = true
+            if LostOrFound.titleForSegmentAtIndex(LostOrFound.selectedSegmentIndex)?.lowercaseString == "found" {
+                newItem.isLost = false
+            }
+            newItem.radius = radius!
+            newItem.location = PFGeoPoint(latitude: placeCoord!.latitude, longitude: placeCoord!.latitude)
+            if let address = PickedPlace.text {
+                newItem.locationAddress = address
+            }
+            newItem.additionalComment = Description.text
+            newItem.category = categories[Category.selectedRowInComponent(0)]
+            newItem.creator = PFUser.currentUser()!
+            newItem.date = DatePicker.date
+            newItem.saveEventually()
+            performSegueWithIdentifier("Added Item", sender: self)
+        } else {
+            // show error dialog
+            alert.title = "Try Again"
+            alert.message = "Please pick place and fill radius."
+            presentViewController(alert, animated: true, completion: nil)
+        }
     }
     
-    @IBAction func PickPlace() {
-        
+    @IBAction func PlacePicked(sender : UIStoryboardSegue) {
+        // dont delete this. // todo may need this one
     }
+    
+    
     
     /*
     // MARK: - Navigation
@@ -73,3 +121,4 @@ class NewItemViewController : UITableViewController,UIPickerViewDataSource,UIPic
     }
     
 }
+

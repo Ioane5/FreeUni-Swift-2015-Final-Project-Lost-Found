@@ -10,14 +10,22 @@ import UIKit
 
 class FoundTableViewController: UITableViewController {
     
-    var foundItems = [
-        Item(name: "სავარცხელი", tags: ["რაღაცა", "რუღაცა"], location: "დიდუბე"),
-        Item(name: "ძაღლი", tags: ["რაღაცა", "რუღაცა"], location: "საბურთალო"),
-        Item(name: "ქოლგა", tags: ["რაღაცა", "რუღაცა"], location: "ვარკეთილი")]
-
+    var foundItems = [] {
+        didSet {
+            // when new items are fetched reload data.
+            self.tableView.reloadData()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        Item.getQuery(true)?.findObjectsInBackgroundWithBlock { [unowned self]
+            (objects, error) in
+            if let objects = objects {
+                self.foundItems = objects
+            }
+        }
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -54,10 +62,9 @@ class FoundTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("foundItem", forIndexPath: indexPath)
 
         // Configure the cell...
-        let foundItem = foundItems[indexPath.row] as Item
-        cell.textLabel?.text = foundItem.name
-        cell.detailTextLabel?.text = foundItem.location
-
+        let foundItem = foundItems[indexPath.row] as! Item
+        cell.textLabel?.text = foundItem.category as String
+        cell.detailTextLabel?.text = foundItem.locationAddress as String
         return cell
     }
 

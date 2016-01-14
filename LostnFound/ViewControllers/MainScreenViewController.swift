@@ -31,6 +31,10 @@ class MainScreenViewController: UITabBarController {
     // Pass the selected object to the new view controller.
     }
     */
+    
+    @IBAction func newItemAdded(sender : UIStoryboardSegue) {
+        // dont delete this. // todo may need this one
+    }
 
     
 }
