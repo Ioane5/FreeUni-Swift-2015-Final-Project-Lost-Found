@@ -25,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
         var vcIdentifier : String
-        if PFUser.currentUser()?.authenticated ?? false{
+        if PFUser.currentUser() != nil && PFUser.currentUser()!.authenticated {
             vcIdentifier = "MainScreen"
         } else {
             vcIdentifier = "Login"
@@ -34,7 +34,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let initialViewController = storyboard.instantiateViewControllerWithIdentifier(vcIdentifier)
         self.window?.rootViewController = initialViewController
         self.window?.makeKeyAndVisible()
-        
         return true
     }
 

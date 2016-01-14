@@ -39,8 +39,35 @@ class NewItemViewController : UITableViewController,UIPickerViewDataSource,UIPic
         }
     }
     
+    func checkForEmailVerification() {
+        if PFUser.currentUser()!["emailVerified"] as? Bool != true{
+            PFUser.currentUser()?.fetchInBackgroundWithBlock {
+                (PFObject, e) -> Void in
+                if PFUser.currentUser()!["emailVerified"] as? Bool == true {
+                    return
+                }
+                let alert = UIAlertController(
+                    title: "Unauthorised User",
+                    message : "Please check your email and verify, or check your internet connection",
+                    preferredStyle: UIAlertControllerStyle.Alert
+                )
+                alert.addAction(UIAlertAction(title: "Ok", style: .Cancel, handler: { action in
+                    switch action.style{
+                    case .Cancel:
+                        self.backPressed()
+                    default :
+                        break
+                    }
+                }))
+                self.presentViewController(alert, animated: true, completion: nil)
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        checkForEmailVerification()
+        
         let backBtn = UIBarButtonItem(barButtonSystemItem: .Cancel, target: self, action: Selector("backPressed"))
         self.navigationItem.leftBarButtonItem = backBtn
         
