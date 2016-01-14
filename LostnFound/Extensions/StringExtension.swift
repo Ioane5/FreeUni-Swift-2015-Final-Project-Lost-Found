@@ -61,5 +61,9 @@ extension String {
         return toUIColor()
     }
     
+    // Todo not yet implemented. 
+    var localized: String {
+        return NSLocalizedString(self, comment: "")
+    }
     
 }

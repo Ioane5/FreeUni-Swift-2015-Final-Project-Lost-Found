@@ -51,6 +51,9 @@ class LoginController: UIViewController {
     }
     
     @IBAction func SignIn() {
+        if isLoading {
+            return
+        }
         if checkFields() {
             isLoading = true
             PFUser.logInWithUsernameInBackground(UsernameField.text!, password: PasswordField.text!) {

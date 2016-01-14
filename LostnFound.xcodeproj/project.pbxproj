@@ -18,6 +18,8 @@
 		3B359F081C405037008CF2EC /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B359F071C405037008CF2EC /* SystemConfiguration.framework */; };
 		3B359F0A1C405042008CF2EC /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B359F091C405042008CF2EC /* libz.tbd */; };
 		3B359F0C1C405049008CF2EC /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B359F0B1C405049008CF2EC /* libsqlite3.tbd */; };
+		3B4AB17A1C46DA0F00754119 /* NewItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4AB1791C46DA0F00754119 /* NewItemViewController.swift */; };
+		3B4AB17C1C471B4200754119 /* PlacePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4AB17B1C471B4200754119 /* PlacePickerViewController.swift */; };
 		3B5DAEAD1C18D85500094B6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5DAEAC1C18D85500094B6C /* AppDelegate.swift */; };
 		3B5DAEB21C18D85500094B6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B5DAEB01C18D85500094B6C /* Main.storyboard */; };
 		3B5DAEB41C18D85500094B6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B5DAEB31C18D85500094B6C /* Assets.xcassets */; };
@@ -43,6 +45,8 @@
 		3B359F071C405037008CF2EC /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		3B359F091C405042008CF2EC /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		3B359F0B1C405049008CF2EC /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		3B4AB1791C46DA0F00754119 /* NewItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewItemViewController.swift; sourceTree = "<group>"; };
+		3B4AB17B1C471B4200754119 /* PlacePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacePickerViewController.swift; sourceTree = "<group>"; };
 		3B5DAEA91C18D85500094B6C /* LostnFound.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LostnFound.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B5DAEAC1C18D85500094B6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B5DAEB11C18D85500094B6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -147,6 +151,8 @@
 				749664251C425C8B005FBE26 /* SignUpViewController.swift */,
 				74692E081C4584FA00696EFE /* FoundTableViewController.swift */,
 				74692E0A1C45851200696EFE /* LostTableViewController.swift */,
+				3B4AB1791C46DA0F00754119 /* NewItemViewController.swift */,
+				3B4AB17B1C471B4200754119 /* PlacePickerViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -251,8 +257,10 @@
 				749664271C425C8B005FBE26 /* LoginViewController.swift in Sources */,
 				749664341C426C39005FBE26 /* StringExtension.swift in Sources */,
 				7446C7921C46C0BD00BDDF91 /* Item.swift in Sources */,
+				3B4AB17A1C46DA0F00754119 /* NewItemViewController.swift in Sources */,
 				3B5DAEAD1C18D85500094B6C /* AppDelegate.swift in Sources */,
 				74692E091C4584FA00696EFE /* FoundTableViewController.swift in Sources */,
+				3B4AB17C1C471B4200754119 /* PlacePickerViewController.swift in Sources */,
 				749664281C425C8B005FBE26 /* MainScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -21,6 +21,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Initialize Parse.
         Parse.setApplicationId("TtYZcp6avRRiewOd3VkYUOAKsyByyzBOM57Eze5S",
             clientKey: "tLYN4EgAKwhIR3umaDQWtIBc7yL0mS8EWEh5NaxG")
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        var vcIdentifier : String
+        if PFUser.currentUser()?.authenticated ?? false{
+            vcIdentifier = "MainScreen"
+        } else {
+            vcIdentifier = "Login"
+        }
+        
+        let initialViewController = storyboard.instantiateViewControllerWithIdentifier(vcIdentifier)
+        self.window?.rootViewController = initialViewController
+        self.window?.makeKeyAndVisible()
+        
         return true
     }
 
@@ -47,10 +61,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 }
-
-extension String {
-    var localized: String {
-        return NSLocalizedString(self, comment: "")
-    }
-}
-

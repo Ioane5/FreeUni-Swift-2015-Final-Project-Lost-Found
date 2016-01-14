@@ -31,7 +31,8 @@ class LostTableViewController: UITableViewController {
     }
     
     func btnAddNewLostItem() {
-        print("Add Button: Clicked")
+        let newItemViewController = self.storyboard?.instantiateViewControllerWithIdentifier("New Item Nav")
+        self.presentViewController(newItemViewController!, animated: true, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {
