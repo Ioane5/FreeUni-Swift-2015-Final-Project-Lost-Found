@@ -19,21 +19,16 @@ class FoundTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        Item.getQuery(true)?.findObjectsInBackgroundWithBlock { [unowned self]
-            (objects, error) in
-            if let objects = objects {
-                self.foundItems = objects
-            }
-        }
+        queryItems()
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         self.navigationItem.leftBarButtonItem = self.editButtonItem()
         let addNew = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: Selector("btnAddNewLostItem"))
         self.navigationItem.rightBarButtonItem = addNew
+        
+        self.refreshControl?.addTarget(self, action: "handleRefresh:", forControlEvents: UIControlEvents.ValueChanged)
     }
     
     func btnAddNewLostItem() {
@@ -41,9 +36,27 @@ class FoundTableViewController: UITableViewController {
         self.presentViewController(newItemViewController!, animated: true, completion: nil)
     }
     
+    func handleRefresh(refreshControl: UIRefreshControl) {
+        queryItems()
+        refreshControl.endRefreshing()
+    }
+    
+    func queryItems() {
+        Item.getQuery(false)?.findObjectsInBackgroundWithBlock { [unowned self]
+            (objects, error) in
+            if let objects = objects {
+                self.foundItems = objects
+            }
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        queryItems()
     }
     
     // MARK: - Table view data source

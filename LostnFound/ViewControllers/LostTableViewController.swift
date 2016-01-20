@@ -10,15 +10,16 @@ import UIKit
 
 class LostTableViewController: UITableViewController {
     
-    //    var lostItems = [
-    //        Item(name: "ბეჭედი", tags: ["რაღაცა", "რუღაცა"], location: "დიდუბე"),
-    //        Item(name: "მანქანა", tags: ["რაღაცა", "რუღაცა"], location: "საბურთალო"),
-    //        Item(name: "ტემპერატურა", tags: ["რაღაცა", "რუღაცა"], location: "ვარკეთილი"),
-    //        Item(name: "მოსწავლე", tags: ["რაღაცა", "რუღაცა"], location: "გორი"),
-    //        Item(name: "ოჯახი", tags: ["რაღაცა", "რუღაცა"], location: "სტეფანწმინდა")]
+    var lostItems = [] {
+        didSet {
+            // when new items are fetched reload data.
+            self.tableView.reloadData()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        queryItems()
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -26,6 +27,8 @@ class LostTableViewController: UITableViewController {
         self.navigationItem.leftBarButtonItem = self.editButtonItem()
         let addNew = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: Selector("btnAddNewLostItem"))
         self.navigationItem.rightBarButtonItem = addNew
+        
+        self.refreshControl?.addTarget(self, action: "handleRefresh:", forControlEvents: UIControlEvents.ValueChanged)
     }
     
     func btnAddNewLostItem() {
@@ -33,9 +36,27 @@ class LostTableViewController: UITableViewController {
         self.presentViewController(newItemViewController!, animated: true, completion: nil)
     }
     
+    func handleRefresh(refreshControl: UIRefreshControl) {
+        queryItems()
+        refreshControl.endRefreshing()
+    }
+    
+    func queryItems() {
+        Item.getQuery(true)?.findObjectsInBackgroundWithBlock { [unowned self]
+            (objects, error) in
+            if let objects = objects {
+                self.lostItems = objects
+            }
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        queryItems()
     }
     
     // MARK: - Table view data source
@@ -45,21 +66,20 @@ class LostTableViewController: UITableViewController {
         return 1 // სატესტოდ
     }
     
-    //    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    //        // #warning Incomplete implementation, return the number of rows
-    //        return lostItems.count // სატესტოდ
-    //    }
-    //
-    //    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    //        let cell = tableView.dequeueReusableCellWithIdentifier("lostItem", forIndexPath: indexPath)
-    //
-    //        // Configure the cell...
-    //        let lostItem = lostItems[indexPath.row] as Item
-    //        cell.textLabel?.text = lostItem.name
-    //        cell.detailTextLabel?.text = lostItem.location
-    //
-    //        return cell
-    //    }
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of rows
+        return lostItems.count // სატესტოდ
+    }
+
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("lostItem", forIndexPath: indexPath)
+
+        // Configure the cell...
+        let foundItem = lostItems[indexPath.row] as! Item
+        cell.textLabel?.text = foundItem.category as String
+        cell.detailTextLabel?.text = foundItem.locationAddress as String
+        return cell
+    }
     
     /*
     // Override to support conditional editing of the table view.
