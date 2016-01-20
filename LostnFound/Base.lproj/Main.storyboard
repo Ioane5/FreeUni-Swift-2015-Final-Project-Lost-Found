@@ -414,7 +414,7 @@
                                                 <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Xbg-ku-MIg">
                                                     <rect key="frame" x="8" y="8" width="422" height="216"/>
                                                     <date key="date" timeIntervalSinceReferenceDate="474415666.06433499">
-                                                        <!--2016-01-13 22:07:46 +0000-->
+                                                        <!--2016-01-13 10:07:46 PM +0000-->
                                                     </date>
                                                 </datePicker>
                                             </subviews>

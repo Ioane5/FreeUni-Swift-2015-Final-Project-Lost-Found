@@ -99,6 +99,6 @@ class SignUpViewController: UIViewController {
         let mainScreen = self.storyboard?.instantiateViewControllerWithIdentifier("MainScreen") as? MainScreenViewController
         self.presentViewController(mainScreen!, animated: true, completion: nil)
     }
-
-
+    
+    
 }

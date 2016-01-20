@@ -19,7 +19,12 @@ class NewItemViewController : UITableViewController,UIPickerViewDataSource,UIPic
     @IBOutlet weak var PickedPlace: UILabel!
     @IBOutlet weak var Radius: UITextField!
     
-    let categories = ["Animals/Pets","Bags, Baggage, Luggage","Clothing/jewelery","Electronics","Jewelry","Other"]
+    let categories = ["Animals/Pets",
+        "Bags, Baggage, Luggage",
+        "Clothing/jewelery",
+        "Electronics",
+        "Jewelry",
+        "Other"]
     
     lazy var alert : UIAlertController = {
         var alert = UIAlertController(

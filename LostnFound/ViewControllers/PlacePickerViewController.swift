@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 
 class PlacePickerViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate  {
-
+    
     @IBOutlet weak var mapView: MKMapView!
     
     let locationManager = CLLocationManager()
@@ -20,7 +20,7 @@ class PlacePickerViewController: UIViewController, MKMapViewDelegate, CLLocation
     lazy var alert : UIAlertController = {
         var alert = UIAlertController(
             title: "Note",
-            message : "Long press to Pick Place",
+            message : "Long Press to Pick Place",
             preferredStyle: UIAlertControllerStyle.Alert
         )
         alert.addAction(UIAlertAction(title: "Got it", style: UIAlertActionStyle.Cancel, handler: nil))
@@ -48,7 +48,7 @@ class PlacePickerViewController: UIViewController, MKMapViewDelegate, CLLocation
     func donePressed() {
         performSegueWithIdentifier("place picked", sender: self)
     }
-
+    
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         locationManager.stopUpdatingLocation()
         let location = locations.last
@@ -56,7 +56,7 @@ class PlacePickerViewController: UIViewController, MKMapViewDelegate, CLLocation
         let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 1, longitudeDelta: 1))
         mapView.setRegion(region, animated: true)
     }
-
+    
     @IBAction func LongPress(sender: UILongPressGestureRecognizer) {
         if chosenCoord != nil {
             return
@@ -87,15 +87,15 @@ class PlacePickerViewController: UIViewController, MKMapViewDelegate, CLLocation
     
     
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if let dest = segue.destinationViewController as? NewItemViewController {
             dest.placeCoord = chosenCoord
         }
     }
-
-
+    
+    
 }
 
 extension CLLocationCoordinate2D {
@@ -110,12 +110,12 @@ extension CLLocationCoordinate2D {
             if let country = dict?["Country"] {
                 addr += country as! String
             }
-
+            
             if let city = dict?["City"] {
                 addr += "," + (city as! String)
             }
             callback(addr)
         })
     }
-
+    
 }
