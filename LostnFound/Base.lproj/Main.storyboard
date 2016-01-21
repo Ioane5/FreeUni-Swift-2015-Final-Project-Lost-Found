@@ -513,8 +513,38 @@
                                             </variation>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="124" id="J38-RF-733">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="124" id="Jdm-Ed-fhp">
                                         <rect key="frame" x="0.0" y="560" width="438" height="124"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Jdm-Ed-fhp" id="V71-0q-WcQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="438" height="123"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="lSn-XX-g88">
+                                                    <rect key="frame" x="8" y="37" width="422" height="78"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wkd-Q6-JI6">
+                                                    <rect key="frame" x="202" y="8" width="34" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.20000000000000001" green="0.59999999999999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="lSn-XX-g88" firstAttribute="leading" secondItem="V71-0q-WcQ" secondAttribute="leadingMargin" id="Fyi-dL-vM5"/>
+                                                <constraint firstItem="lSn-XX-g88" firstAttribute="trailing" secondItem="V71-0q-WcQ" secondAttribute="trailingMargin" id="Q2V-8l-UvZ"/>
+                                                <constraint firstItem="lSn-XX-g88" firstAttribute="top" secondItem="Wkd-Q6-JI6" secondAttribute="bottom" constant="8" symbolic="YES" id="avN-f3-GOM"/>
+                                                <constraint firstItem="Wkd-Q6-JI6" firstAttribute="centerX" secondItem="lSn-XX-g88" secondAttribute="centerX" id="dro-Lq-MVf"/>
+                                                <constraint firstItem="lSn-XX-g88" firstAttribute="bottom" secondItem="V71-0q-WcQ" secondAttribute="bottomMargin" id="kgm-cq-EDO"/>
+                                                <constraint firstItem="Wkd-Q6-JI6" firstAttribute="top" secondItem="V71-0q-WcQ" secondAttribute="topMargin" id="sPu-nx-Z1G"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="124" id="J38-RF-733">
+                                        <rect key="frame" x="0.0" y="684" width="438" height="124"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="J38-RF-733" id="hML-CI-OhI">
                                             <rect key="frame" x="0.0" y="0.0" width="438" height="123"/>
@@ -544,7 +574,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="71" id="BMS-NE-KJU">
-                                        <rect key="frame" x="0.0" y="684" width="438" height="71"/>
+                                        <rect key="frame" x="0.0" y="808" width="438" height="71"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BMS-NE-KJU" id="RA4-Fw-Yb1">
                                             <rect key="frame" x="0.0" y="0.0" width="438" height="70"/>

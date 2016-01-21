@@ -24,7 +24,7 @@ class FoundTableViewController: UITableViewController {
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         
-        self.navigationItem.leftBarButtonItem = self.editButtonItem()
+        //self.navigationItem.leftBarButtonItem = self.editButtonItem()
         let addNew = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: Selector("btnAddNewLostItem"))
         self.navigationItem.rightBarButtonItem = addNew
         

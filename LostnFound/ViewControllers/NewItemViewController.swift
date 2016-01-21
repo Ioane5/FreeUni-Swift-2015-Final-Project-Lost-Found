@@ -21,7 +21,7 @@ class NewItemViewController : UITableViewController,UIPickerViewDataSource,UIPic
     
     let categories = ["Animals/Pets",
         "Bags, Baggage, Luggage",
-        "Clothing/jewelery",
+        "Clothing/Jewelery",
         "Electronics",
         "Jewelry",
         "Other"]
